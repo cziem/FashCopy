@@ -16,7 +16,7 @@ elif [ ! -e "$dFile" ] && [ -d "$dDir" ]; then # File does not exist while folde
     echo ============================
     echo 'Would you like to create the file? Yes [y] or No [n]'
     case $yn in
-        [Yy] ) touch $dFile;;
+        [Yy] ) read dFile; touch $dFile;;
         [Nn] ) exit;;
         * )
     esac
